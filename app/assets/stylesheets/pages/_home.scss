@@ -1,1 +1,19 @@
 // Specific CSS for your home-page
+.card .container a {
+  text-decoration: none;
+  color: white;
+  font-size: 40px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+  padding: 50px 0;
+
+}
+
+.card-background {
+  background-size: 18rem;
+  background-position: center;
+  padding: 50px 0;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}

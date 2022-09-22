@@ -1,0 +1,23 @@
+<%= render 'navbar' %>
+<%# banner_image_url = 'https://s3-us-west-2.amazonaws.com/prd-rteditorial/wp-content/uploads/2018/03/13153742/RT_300EssentialMovies_700X250.jpg' %>
+<%= render 'banner', locals: {banner_image_url: 'https://s3-us-west-2.amazonaws.com/prd-rteditorial/wp-content/uploads/2018/03/13153742/RT_300EssentialMovies_700X250.jpg',
+main_text: "Save your movies, do lists"} %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12 mt-3">
+      <div class="d-flex justify-content-between">
+        <h1 class="mt-1">Movie lists</h1>
+        <%= link_to "Add new list", new_list_path, class:"btn btn-outline-warning px-5 py-3" %>
+      </div>
+    </div>
+    <hr class="mt-3">
+  </div>
+  <div class="row">
+    <% @lists.each do |list| %>
+      <div class="col-md-4 mb-4">
+        <%= render 'card', locals: {list: list, image_url: 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/summer-movies-1587392939.jpg'} %>
+      </div>
+    <% end %>
+  </div>
+</div>

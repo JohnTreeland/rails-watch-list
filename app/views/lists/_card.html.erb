@@ -1,0 +1,8 @@
+<div class="card">
+  <div class="card-background" style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(<%= locals[:image_url] %>);">
+  <%# <img src=<%= locals[:image_url] %> <%#class="card-img" alt="..."> %>
+    <div class="container text-center">
+      <h3><%= link_to locals[:list].name, list_path(locals[:list], class:"thumbnailcard-title pt-3") %></h3>
+    </div>
+  </div>
+</div>
