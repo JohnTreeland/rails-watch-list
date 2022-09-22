@@ -1,7 +1,6 @@
 <%= render 'navbar' %>
 <%# banner_image_url = 'https://s3-us-west-2.amazonaws.com/prd-rteditorial/wp-content/uploads/2018/03/13153742/RT_300EssentialMovies_700X250.jpg' %>
-<%= render 'banner', locals: {banner_image_url: 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/summer-movies-1587392939.jpg',
-main_text: @list.name} %>
+<%= render 'banner', locals: {banner_image_url: cl_image_path(@list.photo.key), main_text: @list.name} %>
 
 <div class="container">
   <div class="row">

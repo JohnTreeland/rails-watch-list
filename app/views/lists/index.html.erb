@@ -16,7 +16,7 @@ main_text: "Save your movies, do lists"} %>
   <div class="row">
     <% @lists.each do |list| %>
       <div class="col-md-4 mb-4">
-        <%= render 'card', locals: {list: list, image_url: 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/summer-movies-1587392939.jpg'} %>
+        <%= render 'card', locals: {list: list, image_url: cl_image_path(list.photo.key)} %>
       </div>
     <% end %>
   </div>
